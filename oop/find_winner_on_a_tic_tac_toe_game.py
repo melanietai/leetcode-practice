@@ -49,6 +49,7 @@ class Solution:
         for i in range(size):
             self.board.append([" "] * 3)
         return self.board
+        # return [[0] * size for _n in range(size)]
     
     def move(self, row, col, player):
         self.board[row][col] = player
