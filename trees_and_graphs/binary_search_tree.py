@@ -20,4 +20,21 @@ class BinaryTreeNode:
             else:
                 root = root.right
         return root
+    
+    def insert_recursion(self, root, val):
+        if not root:
+            return BinaryTreeNode(val)
+        
+        if val < root.val:
+            root.left = self.insert_recursion(root.left, val)
+        else:
+            root.right = self.insert_recursion(root.right, val)
+        
+        return root
+    
+    def insert_iteration(self, root, val):
+        node = root
+        
+        
+        
 
