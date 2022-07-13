@@ -1,6 +1,6 @@
 import unittest
 from is_all_chars_unique import is_unique, is_unique_set, is_unique_dict
-from is_permutation import is_permutation_counter
+from is_permutation import is_permutation_counter, is_permutation_sort, is_permutation_bytearray
 
 class Test1(unittest.TestCase):
     test_cases_is_unique = [
@@ -42,6 +42,16 @@ class Test2(unittest.TestCase):
     def test_is_permutation_counter(self):
         for s1, s2, expected in self.test_cases_is_permutation:
             result = is_permutation_counter(s1, s2)
+            self.assertEqual(result, expected)
+
+    def test_is_permutation_sort(self):
+        for s1, s2, expected in self.test_cases_is_permutation:
+            result = is_permutation_sort(s1, s2)
+            self.assertEqual(result, expected)
+    
+    def test_is_permutation_bytearray(self):
+        for s1, s2, expected in self.test_cases_is_permutation:
+            result = is_permutation_bytearray(s1, s2)
             self.assertEqual(result, expected)
 
 if __name__ == "__main__":
