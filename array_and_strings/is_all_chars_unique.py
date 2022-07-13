@@ -15,7 +15,7 @@ def is_unique_dict(string):
     char_seen = dict()
 
     for ch in string:
-        if char_seen[ch] == 1:
+        if char_seen.get(ch) == 1:
             return False 
         char_seen[ch] = 1 
     
