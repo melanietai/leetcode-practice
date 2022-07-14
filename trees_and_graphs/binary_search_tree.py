@@ -82,6 +82,20 @@ class BinaryTreeNode:
                 root.left = self.delete_recursive(root.left, root.val)
         return root
         
+    def delete_iterative(self, root, val):
+        pass
+    
+    def get_node(self, root, val):
+        node = root
 
-        
+        while node:
+            if node.val == val:
+                return node
+            if val < node.val:
+                node = node.left
+            else:
+                node = node.right
+        raise Exception("No such value in the tree.")
 
+class BinaryTree:
+    
