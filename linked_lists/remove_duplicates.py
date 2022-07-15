@@ -24,3 +24,27 @@ class ListNode:
                 prev = cur
             cur = cur.next
         return dummy.next
+    
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        cur = head
+        length = 0
+        while cur:
+            length += 1
+            cur = cur.next
+        
+        ind_to_remove = length - n
+        
+        cur = head
+        dummy = ListNode(next=head)
+        prev = dummy
+        cur_ind = 0
+        while cur:
+            if cur_ind == ind_to_remove:
+                prev.next = cur.next
+            else:
+                prev = cur
+            cur = cur.next
+            cur_ind += 1
+
+        return dummy.next
+        
