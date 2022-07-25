@@ -47,8 +47,8 @@ class LinkedList:
             prev = node 
         self.head = prev
             
-# Assume we have already built the list
-# We will now traverse the list and print it
+    # Assume we have already built the list
+    # We will now traverse the list and print it
 
     def print_list(self):
         """Traversing: Print all items in the list."""

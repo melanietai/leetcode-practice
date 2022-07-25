@@ -51,6 +51,13 @@ class Node:
     def find_DFS_recursive(self, data):
         pass
 
+    def indent_list(self, node, depth=0):
+        """List all nodes, indented (based on depth/level)."""
+        print("   " * depth + node.data)
+        for child in node.children:
+            self.indent_list(child, depth + 1)
+    
+
 class Tree:
     def __init__(self, root):
         self.root = root
