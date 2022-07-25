@@ -1,6 +1,6 @@
 # Queue
 # implement as linked list and circular array
-# can use collections.deque object - doubly linked lists
+# can use collections.deque object - doubly linked lists - method .popleft() for dequeue and .append(item) for enqueue
 
 class Node:
     def __init__(self, data, next=None):
