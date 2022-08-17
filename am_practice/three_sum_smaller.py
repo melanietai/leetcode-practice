@@ -18,3 +18,21 @@ class Solution:
             else:
                 e -= 1
         return total
+
+# two pointers solution 2
+class Solution:
+    def threeSumSmaller(self, nums: List[int], target: int) -> int:
+        nums.sort()
+        total = 0
+        for i in range(len(nums)-2):
+            s, e = i+1, len(nums)-1
+            while s < e:
+                addition = nums[i] + nums[s] + nums[e]
+                if addition < target:
+                    total += e-s
+                    s += 1
+                else:
+                    e -= 1
+        return total
+
+
